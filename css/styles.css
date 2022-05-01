@@ -85,12 +85,10 @@ main {
 .product-intro {
   width: 90%;
   padding: 3rem 1rem 2rem 1rem;
-  margin-top: -15%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: -15% auto 1rem auto;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   text-align: center;
   position: relative;
 }
@@ -140,11 +138,11 @@ main {
 /* Div: .project-progress */
 .project-progress {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
   padding: 2rem 1rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   text-align: center;
 }
 
@@ -191,5 +189,90 @@ main {
   position: absolute;
   left: 0;
   border-radius: 10px;
+}
+
+/* Div: Project-about */
+.project-about {
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  padding: 2rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
+.project-about > h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.project-about > div {
+  margin-bottom: 1.5rem;
+  line-height: 1.25rem;
+}
+
+.product {
+  margin-bottom: 1rem;
+  border: 1px solid hsla(0, 0%, 0%, .25);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.product-name {
+  margin-bottom: .25rem;
+  font-weight: 700;
+}
+
+.product-amount {
+  margin-bottom: 1.5rem;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+
+.product-description {
+  margin-bottom: 1.5rem;
+  width: 97%;
+}
+
+.product-availability {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.product-availability > strong {
+  font-size: 1.5rem;
+  padding-right: .5rem;
+}
+
+.product-confirm {
+  background-color: hsl(176, 50%, 47%);
+  padding: 1rem 2rem;
+  border-radius: 500px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.product-empty > .product-name {
+  color: hsla(0, 0%, 0%, .5);
+}
+
+.product-empty > .product-amount {
+  color: hsla(176, 50%, 47%, .5);
+}
+
+.product-empty > .product-description {
+  color: hsla(0, 0%, 0%, .5);
+}
+
+.product-empty > .product-availability {
+  color: hsla(0, 0%, 0%, .5);
+}
+
+.product-empty > .product-confirm {
+  background-color:hsla(0, 0%, 0%, .25);
+  cursor: auto;
 }
 /* Footer */
