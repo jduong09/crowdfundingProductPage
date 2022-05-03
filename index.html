@@ -88,23 +88,40 @@
         </li>
       </ul>
     </div>
-    <div class="project-modal">
-      <h2>Back this project</h2>
-      <div>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</div>
+    <div class="project-modal hide">
+      <div id="modal-header">
+        <h2>Back this project</h2>
+        <img id="modal-close" src="images/icon-close-modal.svg" alt="icon-close" aria-label="close button to close modal" />
+      </div>
+      <div id="modal-description" >Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</div>
       <ul class="product-list">
-        <li class="product">
+        <li id="product-1" class="product">
           <div class="project-modal-list-header">
-            <input class="product-checkbox" type="checkbox" />
+            <span class="product-checkbox-container">
+              <input id="checkbox-1" class="product-checkbox" type="checkbox" />
+            </span>
             <h3 class="product-name">Pledge with no reward</h3>
           </div>
           <div class="product-description">
             Choose to support us without a reward if you simply believe in our project. As a backer, 
             you will be signed up to receive product updates via email.
           </div>
+          <div class="selected-pledge hide">
+            <h4>Enter your pledge</h4>
+            <div>
+              <div class="pledge-amount-container">
+                <span>$</span>
+                <input class="pledge-amount" type="number" value="200" />
+              </div>
+              <input class="pledge-submit" type="button" value="Continue" />
+            </div>
+          </div>
         </li>
-        <li class="product">
+        <li id="product-2" class="product">
           <div class="project-modal-list-header">
-            <input class="product-checkbox" type="checkbox" />
+            <span class="product-checkbox-container">
+              <input id="checkbox-2" class="product-checkbox" type="checkbox" />
+            </span>
             <div>
               <h3 class="product-name">Bamboo Stand</h3>
               <div class="product-amount">Pledge $25 or more</div>
@@ -115,7 +132,7 @@
   you'll be added to a special Backer member list.
           </div>
           <div class="product-availability"><strong>101</strong><div> left</div></div>
-          <div class="selected-pledge">
+          <div class="selected-pledge hide">
             <h4>Enter your pledge</h4>
             <div>
               <div class="pledge-amount-container">
@@ -126,9 +143,11 @@
             </div>
           </div>
         </li>
-        <li class="product">
+        <li id="product-3" class="product">
           <div class="project-modal-list-header">
-            <input class="product-checkbox" type="checkbox" />
+            <span class="product-checkbox-container">
+              <input id="checkbox-3" class="product-checkbox" type="checkbox" />
+            </span>
             <div>
               <h3 class="product-name">Black Edition Stand</h3>
               <div class="product-amount">Pledge $75 or more</div>
@@ -138,7 +157,7 @@
             member list. Shipping is included.
           </div>
           <div class="product-availability"><strong>64</strong><div> left</div></div>
-          <div class="selected-pledge">
+          <div class="selected-pledge hide">
             <h4>Enter your pledge</h4>
             <div>
               <div class="pledge-amount-container">
@@ -149,9 +168,11 @@
             </div>
           </div>
         </li>
-        <li class="product product-empty">
+        <li id="product-4" class="product product-empty">
           <div class="project-modal-list-header">
-            <input class="product-checkbox" type="checkbox" />
+            <span class="product-checkbox-container">
+              <input id="checkbox-4" class="product-checkbox" type="checkbox" />
+            </span>
             <div>
               <h3 class="product-name">Mahogany Special Edition</h3>
               <div class="product-amount">Pledge $200 or more</div>
@@ -161,7 +182,7 @@
             to our Backer member list. Shipping is included.
           </div>
           <div class="product-availability"><strong>0</strong><div> left</div></div>
-          <div class="selected-pledge">
+          <div class="selected-pledge hide">
             <h4>Enter your pledge</h4>
             <div>
               <div class="pledge-amount-container">
