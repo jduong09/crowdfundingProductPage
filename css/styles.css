@@ -226,29 +226,36 @@ main {
   margin-bottom: 1rem;
   border: 1px solid hsla(0, 0%, 0%, .25);
   border-radius: 10px;
-  padding: 1rem;
+  /*padding: 1rem;*/
 }
 
 .product-name {
   margin-bottom: .25rem;
   font-weight: 700;
+  width: 90%;
+  margin: 1.5rem auto .25rem auto;
 }
 
 .product-amount {
   margin-bottom: 1.5rem;
   color: hsl(176, 50%, 47%);
   font-weight: 500;
+  width: 90%;
+  margin: 0 auto 1.5rem auto;
 }
 
 .product-description {
   margin-bottom: 1.5rem;
-  width: 97%;
+  width: 90%;
+  margin: 0 auto 1.5rem auto;
 }
 
 .product-availability {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+  width: 90%;
+  margin: 0 auto 1.5rem auto;
 }
 
 .product-availability > strong {
@@ -263,6 +270,7 @@ main {
   color: hsl(0, 0%, 100%);
   font-weight: 500;
   cursor: pointer;
+  margin: 0 0 1.5rem 1rem;
 }
 
 .product-empty > .product-name {
@@ -318,6 +326,8 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  width: 90%;
+  margin: 1.5rem auto;
 }
 
 .product-checkbox {
@@ -334,6 +344,7 @@ main {
 }
 
 .project-modal-list-header div {
+  width: 100%;
   margin: 0;
 }
 
@@ -341,6 +352,7 @@ main {
   border-top: 1px solid hsla(0, 0%, 0%, .25);
   width: 100%;
 }
+
 .selected-pledge > h4 {
   margin: 1.5rem auto;
   text-align: center;
@@ -349,6 +361,8 @@ main {
 .selected-pledge > div {
   display: flex;
   justify-content: space-between;
+  width: 85%;
+  margin: 0 auto 1.5rem auto;
 }
 
 .pledge-amount-container {
@@ -368,16 +382,17 @@ main {
   text-align: center;
   font-weight: 700;
   position: relative;
+  cursor: pointer;
 }
 
 .pledge-submit {
   width: 50%;
   padding: 1rem 2rem;
-  border: 1px solid hsl(176, 50%, 47%);
   background-color: hsl(176, 50%, 47%);
   color: hsl(0, 0%, 100%);
   border-radius: 500px;
   text-align: center;
+  cursor: pointer;
 }
 
 .product-empty .product-name {
@@ -395,6 +410,12 @@ main {
 .product-empty .pledge-amount {
   font-weight:400;
   color: hsla(0, 0%, 0%, .5);
+}
+
+.product-empty .pledge-submit {
+  background-color:hsla(0, 0%, 0%, .25);
+  border-color: hsla(0, 0%, 0%, .25);
+  cursor: auto;
 }
 
 /* Selected-pledge input1/input2 */
