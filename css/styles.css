@@ -9,7 +9,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .backdrop {
@@ -134,6 +134,10 @@ main {
   font-weight: 500;
   background-color: hsl(176, 50%, 47%);
   border-radius: 500px;
+}
+
+#btn-cta:hover, .product-confirm:hover, .pledge-submit:hover, #modal-success > input:hover {
+  background-color: hsl(176, 72%, 28%);
 }
 
 #btn-bookmark {
@@ -450,5 +454,44 @@ main {
   margin-right: .75rem;
 }
 
-/* Selected-pledge input1/input2 */
-/* Footer */
+/* Div: Modal-success */
+#modal-success {
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#icon-checkmark {
+  width: 64px;
+  height: 64px;
+  margin-top: 2rem;
+}
+
+#modal-success > h2 {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 1.5rem 0;
+}
+
+#modal-success > div {
+  margin-bottom: 1.5rem;
+}
+
+#modal-success > input {
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  background-color: hsl(176, 50%, 47%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  border-radius: 500px;
+}

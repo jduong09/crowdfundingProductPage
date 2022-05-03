@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectModal = document.querySelector('.project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
   const productModalCheckboxes = document.getElementsByClassName('product-checkbox');
+  const pledgeSubmitBtns = document.getElementsByClassName('pledge-submit');
+  // Modal-success
+  const successModal = document.getElementById('modal-success');
+  const successModalBtn = document.getElementById('button-modal-close');
 
   menuHamburger.addEventListener('click', () => {
     menuHamburger.classList.add('hide');
@@ -58,6 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedPledge = product.children.item(product.children.length - 1);
       product.classList.add('selected');
       selectedPledge.classList.remove('hide');
+    });
+
+    for (let j = 0; j < pledgeSubmitBtns.length; j++) {
+      const submitBtn = pledgeSubmitBtns[j];
+      submitBtn.addEventListener('click', () => {
+        projectModal.classList.add('hide');
+        successModal.classList.remove('hide');
+      });
+    }
+
+    successModalBtn.addEventListener('click', () => {
+      successModal.classList.add('hide');
+      backdrop.classList.add('hide');
     });
   }
 });
