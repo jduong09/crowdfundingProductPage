@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backdrop = document.querySelector('.backdrop');
   // Main
   const ctaBtn = document.getElementById('btn-cta');
+  const bookmarkBtn = document.getElementById('btn-bookmark');
   // Project-Modal
   const projectModal = document.querySelector('.project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
@@ -35,6 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     projectModal.classList.remove('hide');
     backdrop.classList.remove('hide');
   });
+
+  bookmarkBtn.addEventListener('click', () => {
+    if (bookmarkBtn.classList.contains('bookmarked')) {
+      bookmarkBtn.classList.remove('bookmarked');
+    } else {
+      bookmarkBtn.classList.add('bookmarked');
+    }
+  })
 
   modalCloseBtn.addEventListener('click', () => {
     projectModal.classList.add('hide');

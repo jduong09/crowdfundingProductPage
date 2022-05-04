@@ -72,9 +72,7 @@ header {
 .menu-list > li {
   padding: 1.6rem;
   font-weight: 500;
-}
-
-.menu-list > li {
+  cursor: pointer;
   border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
@@ -139,13 +137,20 @@ main {
   background-color: hsl(176, 72%, 28%);
 }
 
-#btn-bookmark {
-  width: 56px;
-  height: 56px;
-}
-
 #btn-cta, #btn-bookmark {
   cursor: pointer;
+}
+
+#btn-bookmark:hover circle {
+  fill: hsl(0, 0%, 40%)
+}
+
+#btn-bookmark.bookmarked circle {
+  fill: hsl(176, 72%, 28%);
+}
+
+#btn-bookmark.bookmarked path {
+  fill: hsl(0, 0%, 100%);
 }
 
 /* Div: .project-progress */
