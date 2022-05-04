@@ -59,7 +59,6 @@ header {
   z-index: 2;
 }
 
-
 .menu-list {
   width: 90%;
   position: absolute;
@@ -327,9 +326,10 @@ main {
   font-weight: 700;
 }
 
-#modal-close {
-  width: 15px;
-  height: 15px;
+
+#modal-close > path:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .project-modal > div {
@@ -357,6 +357,15 @@ main {
   margin: 0;
 }
 
+.project-modal-list-header .product-name:hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+
+.project-modal-list-header .product-name:hover + .product-amount {
+  font-weight: 700;
+}
+
 .project-modal-list-header div {
   width: 100%;
   margin: 0;
@@ -381,22 +390,31 @@ main {
 
 .pledge-amount-container {
   width: 40%;
-  padding: 1rem;
-  border: 1px solid hsla(0, 0%, 0%, .25);
   display: flex;
-  border-radius: 500px;
+  position: relative;
 }
 
 .pledge-amount-container > span {
   color: hsla(0, 0%, 0%, .25);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
 }
 
 .pledge-amount {
   width: 100%;
   text-align: center;
   font-weight: 700;
-  position: relative;
   cursor: pointer;
+  padding: 1rem;
+  border: 1px solid hsla(0, 0%, 0%, .25);
+  border-radius: 500px;
+}
+
+.pledge-amount:focus {
+  outline-color: hsl(176, 50%, 47%);
+  caret-color: hsl(176, 50%, 47%);
 }
 
 .pledge-submit {
@@ -452,6 +470,10 @@ main {
   border-radius: 50%;
   background-color: hsl(176, 50%, 47%);
   margin-right: .75rem;
+}
+
+.selected .product-amount {
+  font-weight: 700;
 }
 
 /* Div: Modal-success */

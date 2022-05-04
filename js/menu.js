@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project-Modal
   const projectModal = document.querySelector('.project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
-  const productModalCheckboxes = document.getElementsByClassName('product-checkbox');
+  const productModalHeaders = document.getElementsByClassName('product-header');
   const pledgeSubmitBtns = document.getElementsByClassName('pledge-submit');
   // Modal-success
   const successModal = document.getElementById('modal-success');
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     backdrop.classList.add('hide');
   });
 
-  for (let i = 0; i < productModalCheckboxes.length; i++) {
-    const currentCheckbox = productModalCheckboxes[i];
+  for (let i = 0; i < productModalHeaders.length; i++) {
+    const currentCheckbox = productModalHeaders[i];
     //currentCheckbox has id named 'checkbox-1'
     currentCheckbox.addEventListener('click', () => {
-      const product = document.getElementById(`product-${currentCheckbox.id.substring(9, 10)}`);
+      const product = document.getElementById(`product-${currentCheckbox.id.substring(15, 16)}`);
       // Add conditional to null any changes if product is empty
       if (product.classList.contains('product-empty')) {
         return;

@@ -91,16 +91,17 @@
     <div class="project-modal hide">
       <div id="modal-header">
         <h2>Back this project</h2>
-        <img id="modal-close" src="images/icon-close-modal.svg" alt="icon-close" aria-label="close button to close modal" />
+        <!-- <img id="modal-close" src="images/icon-close-modal.svg" alt="icon-close" aria-label="close button to close modal" /> -->
+        <svg id="modal-close" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4"/></svg>
       </div>
       <div id="modal-description" >Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</div>
       <ul class="product-list">
         <li id="product-1" class="product">
           <div class="project-modal-list-header">
             <span class="product-checkbox-container">
-              <input id="checkbox-1" class="product-checkbox" type="checkbox" />
+              <input class="product-checkbox" type="checkbox" />
             </span>
-            <h3 class="product-name">Pledge with no reward</h3>
+            <h3 id="product-header-1" class="product-name product-header">Pledge with no reward</h3>
           </div>
           <div class="product-description">
             Choose to support us without a reward if you simply believe in our project. As a backer, 
@@ -118,12 +119,12 @@
           </div>
         </li>
         <li id="product-2" class="product">
-          <div class="project-modal-list-header">
+          <div id="product-header-2" class="project-modal-list-header">
             <span class="product-checkbox-container">
-              <input id="checkbox-2" class="product-checkbox" type="checkbox" />
+              <input class="product-checkbox" type="checkbox" />
             </span>
             <div>
-              <h3 class="product-name">Bamboo Stand</h3>
+              <h3 id="product-header-2" class="product-name product-header">Bamboo Stand</h3>
               <div class="product-amount">Pledge $25 or more</div>
             </div>
           </div>
@@ -146,10 +147,10 @@
         <li id="product-3" class="product">
           <div class="project-modal-list-header">
             <span class="product-checkbox-container">
-              <input id="checkbox-3" class="product-checkbox" type="checkbox" />
+              <input class="product-checkbox" type="checkbox" />
             </span>
             <div>
-              <h3 class="product-name">Black Edition Stand</h3>
+              <h3 id="product-header-3" class="product-name product-header">Black Edition Stand</h3>
               <div class="product-amount">Pledge $75 or more</div>
             </div>
           </div>
@@ -171,10 +172,10 @@
         <li id="product-4" class="product product-empty">
           <div class="project-modal-list-header">
             <span class="product-checkbox-container">
-              <input id="checkbox-4" class="product-checkbox" type="checkbox" />
+              <input class="product-checkbox" type="checkbox" />
             </span>
             <div>
-              <h3 class="product-name">Mahogany Special Edition</h3>
+              <h3 id="product-header-4" class="product-name product-header">Mahogany Special Edition</h3>
               <div class="product-amount">Pledge $200 or more</div>
             </div>
           </div>
