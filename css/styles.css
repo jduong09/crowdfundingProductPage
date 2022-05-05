@@ -88,6 +88,7 @@ header {
 /* Main */
 main {
   position: relative;
+  padding-bottom: 5rem;
 }
 
 /* Div: .product-intro */
@@ -128,7 +129,9 @@ main {
 }
 
 .product-intro li {
+  width: 56px;
   height: 56px;
+  position: relative;
 }
 
 #btn-cta {
@@ -137,6 +140,7 @@ main {
   font-weight: 500;
   background-color: hsl(176, 50%, 47%);
   border-radius: 500px;
+  height: 56px;
 }
 
 #btn-cta:hover, .product-confirm:hover, .pledge-submit:hover, #modal-success > input:hover {
@@ -145,6 +149,25 @@ main {
 
 #btn-cta, #btn-bookmark {
   cursor: pointer;
+}
+
+#btn-bookmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#input-bookmark {
+  padding: 1rem 2rem 1rem 4rem;
+  background-color: hsl(0, 0%, 80%);
+  height: 56px;
+  border-radius: 500px;
+}
+
+#input-bookmark.bookmarked {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(176, 72%, 28%);
+  font-weight: 500;
 }
 
 #btn-bookmark:hover circle {
@@ -218,7 +241,7 @@ main {
 /* Div: Project-about */
 .project-about {
   width: 90%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
   padding: 2rem 1rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
@@ -237,11 +260,11 @@ main {
 }
 
 .product {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border: 1px solid hsla(0, 0%, 0%, .25);
   border-radius: 10px;
-  /*padding: 1rem;*/
 }
+
 
 .product-name {
   margin-bottom: .25rem;
@@ -438,6 +461,10 @@ main {
   cursor: pointer;
 }
 
+.project-modal .product:last-of-type {
+  margin-bottom: 3rem;
+}
+
 .product-empty .product-name {
   color: hsla(0, 0%, 0%, .5);
 }
@@ -562,6 +589,10 @@ main {
     margin-right: 1rem;
   }
 
+  .menu-list > li:hover {
+    text-decoration: underline;
+  }
+
   .menu-list > li:last-of-type {
     margin-right: 0;
   }
@@ -584,6 +615,10 @@ main {
   .product-intro > ul {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .product-intro li {
+    width: auto;
   }
 
   .project-progress {
@@ -620,7 +655,6 @@ main {
   .project-about {
     width: 50%;
     padding: 2.5rem;
-    margin-bottom: 5rem;
   }
 
   .project-about > div {
@@ -660,4 +694,92 @@ main {
     margin: 0;
   }
 
+  .project-modal {
+    width: 50%;
+  }
+
+  #modal-header {
+    margin-top: 3rem;
+  }
+
+  #modal-header > h2 {
+    font-size: 1.5rem;
+  }
+
+  #modal-close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+
+  #modal-description {
+    margin-bottom: 2rem;
+  }
+
+  .project-modal .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-modal-list-header {
+    flex: 3;
+    order: 1;
+    margin-left: 1.5rem;
+  }
+
+  .project-modal-list-header > div {
+    display: flex;
+  }
+
+  .project-modal-list-header .product-name {
+    width: 40%;
+  }
+
+  .project-modal .product-description {
+    order: 3;
+    margin-left: 61px;
+  }
+
+  .project-modal .product-availability {
+    flex: 1;
+    order: 2;
+    margin-bottom: 0;
+    justify-content: end;
+  }
+
+  .project-modal .product-availability div {
+    margin-right: 1.5rem;
+  }
+
+  .selected-pledge {
+    order: 4;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .selected-pledge > h4 {
+    text-align: start;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    align-self: center;
+  }
+
+  .selected-pledge > div {
+    width: 40%;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+  }
+
+  #modal-success {
+    top: 8.5%;
+    width: 35%;
+  }
+
+  #modal-success > h2 {
+    font-size: 1.5rem;
+  }
+
+  #modal-success > div {
+    width: 90%;
+    line-height: 1.5rem;
+  }
 }

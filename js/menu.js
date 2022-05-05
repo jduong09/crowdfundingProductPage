@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Main
   const ctaBtn = document.getElementById('btn-cta');
   const bookmarkBtn = document.getElementById('btn-bookmark');
+  const bookmarkInput = document.getElementById('input-bookmark');
   // Project-Modal
   const projectModal = document.querySelector('.project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
@@ -40,8 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
   bookmarkBtn.addEventListener('click', () => {
     if (bookmarkBtn.classList.contains('bookmarked')) {
       bookmarkBtn.classList.remove('bookmarked');
+      bookmarkInput.classList.remove('bookmarked');
     } else {
       bookmarkBtn.classList.add('bookmarked');
+      bookmarkInput.classList.add('bookmarked');
     }
   })
 
@@ -89,6 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth >= '576') {
       menuHamburger.classList.add('hide');
       menuList.classList.remove('hide');
+      bookmarkInput.classList.remove('hide');
     }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= '576') {
+        menuHamburger.classList.add('hide');
+        menuList.classList.remove('hide');
+        bookmarkInput.classList.remove('hide');
+      } else {
+        menuHamburger.classList.remove('hide');
+        menuList.classList.add('hide');
+        bookmarkInput.classList.add('hide');
+      }
+    })
   }
 });
