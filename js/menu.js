@@ -85,5 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       successModal.classList.add('hide');
       backdrop.classList.add('hide');
     });
+
+    if (window.innerWidth >= '576') {
+      menuHamburger.classList.add('hide');
+      menuList.classList.remove('hide');
+    }
   }
 });
