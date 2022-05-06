@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const ctaBtn = document.getElementById('btn-cta');
   const bookmarkBtn = document.getElementById('btn-bookmark');
   const bookmarkInput = document.getElementById('input-bookmark');
+  const confirmBtns = document.getElementsByClassName('product-confirm');
   // Project-Modal
   const projectModal = document.querySelector('.project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
   const productModalHeaders = document.getElementsByClassName('product-header');
   const pledgeSubmitBtns = document.getElementsByClassName('pledge-submit');
+  const selectedProducts = document.getElementsByClassName('product selected');
   // Modal-success
   const successModal = document.getElementById('modal-success');
   const successModalBtn = document.getElementById('button-modal-close');
@@ -46,11 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
       bookmarkBtn.classList.add('bookmarked');
       bookmarkInput.classList.add('bookmarked');
     }
-  })
+  });
+
+  for (let k = 0; k < confirmBtns.length; k++) {
+    const btn = confirmBtns[k];
+    // list item is product-list
+    btn.addEventListener('click', () => {
+      // need to find project-modal-list-item
+      // we know that the first item in the modal is to pledge with no reward
+      const modalListItem = document.getElementById(`product-${k + 2}`);
+      modalListItem.classList.add('selected');
+      const selectedPledge = modalListItem.children.item(modalListItem.children.length - 1);
+      selectedPledge.classList.remove('hide');
+      projectModal.classList.remove('hide');
+      backdrop.classList.remove('hide');
+    });
+  };
 
   modalCloseBtn.addEventListener('click', () => {
     projectModal.classList.add('hide');
     backdrop.classList.add('hide');
+
+    for (let i = 0; i < selectedProducts.length; i++) {
+      selectedProducts[i].children.item(selectedProducts[i].children.length - 1).classList.add('hide');
+      selectedProducts[i].classList.remove('selected');
+    }
   });
 
   for (let i = 0; i < productModalHeaders.length; i++) {
