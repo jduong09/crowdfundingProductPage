@@ -151,25 +151,6 @@ main {
   cursor: pointer;
 }
 
-#btn-bookmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#input-bookmark {
-  padding: 1rem 2rem 1rem 4rem;
-  background-color: hsl(0, 0%, 80%);
-  height: 56px;
-  border-radius: 500px;
-}
-
-#input-bookmark.bookmarked {
-  background-color: hsl(0, 0%, 95%);
-  color: hsl(176, 72%, 28%);
-  font-weight: 500;
-}
-
 #btn-bookmark:hover circle {
   fill: hsl(0, 0%, 40%)
 }
@@ -264,7 +245,6 @@ main {
   border: 1px solid hsla(0, 0%, 0%, .25);
   border-radius: 10px;
 }
-
 
 .product-name {
   margin-bottom: .25rem;
@@ -565,11 +545,11 @@ main {
   }
 
   h1 {
-    margin-left: 9rem;
+    margin-left: 4rem;
   }
 
   nav {
-    margin-right: 9rem;
+    margin-right: 4rem;
   }
 
   .menu-list {
@@ -600,7 +580,7 @@ main {
 
   .product-intro {
     width: 50%;
-    margin-top: -6%;
+    margin-top: -25%;
     padding-bottom: 3rem;
   }
 
@@ -638,14 +618,14 @@ main {
   }
 
   .progress-list strong {
-    font-size: 2.125rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
   .progress-list > li::after {
     left: initial;
-    right: 0%;
+    right: -15%;
     bottom: 50%;
     transform: translateY(50%);
     width: 0;
@@ -676,22 +656,8 @@ main {
     text-align: end;
   }
 
-  .product-availability-container {
-    display: flex;
-    width: 90%;
-    margin: 0 auto 2rem auto;
-  }
-
-  .product-availability-container > .product-availability {
-    margin: 0;
-  }
-
   .product-availability > strong {
     font-size: 1.75rem;
-  }
-
-  .product-availability-container > .product-confirm {
-    margin: 0;
   }
 
   .project-modal {
@@ -781,5 +747,67 @@ main {
   #modal-success > div {
     width: 90%;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-intro {
+    margin-top: -15%;
+  }
+}
+
+@media (min-width: 992px) {
+  
+  h1 {
+    margin-left: 9rem;
+  }
+
+  nav {
+    margin-right: 9rem;
+  }
+
+  .product-intro {
+    margin-top: -6%;
+  }
+
+  #btn-bookmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #input-bookmark {
+    padding: 1rem 2rem 1rem 4rem;
+    background-color: hsl(0, 0%, 80%);
+    height: 56px;
+    border-radius: 500px;
+  }
+  
+  #input-bookmark.bookmarked {
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(176, 72%, 28%);
+    font-weight: 500;
+  }
+
+  .progress-list strong {
+    font-size: 2.125rem;
+  }
+
+  .progress-list > li:after {
+    right: 0%;
+  }
+
+  .product-availability-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+  }
+
+  .product-availability-container > .product-availability {
+    margin: 0;
+  }
+
+  .product-availability-container > .product-confirm {
+    margin: 0;
   }
 }

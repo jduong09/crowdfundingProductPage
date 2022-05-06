@@ -117,14 +117,24 @@ document.addEventListener('DOMContentLoaded', () => {
       bookmarkInput.classList.remove('hide');
     }
 
+    if (window.innerWidth >= '992') {
+      bookmarkInput.classList.remove('hide');
+    } else {
+      bookmarkInput.classList.add('hide');
+    }
+
     window.addEventListener('resize', () => {
       if (window.innerWidth >= '576') {
         menuHamburger.classList.add('hide');
         menuList.classList.remove('hide');
-        bookmarkInput.classList.remove('hide');
       } else {
         menuHamburger.classList.remove('hide');
         menuList.classList.add('hide');
+      }
+
+      if (window.innerWidth >= '992') {
+        bookmarkInput.classList.remove('hide');
+      } else {
         bookmarkInput.classList.add('hide');
       }
     })
